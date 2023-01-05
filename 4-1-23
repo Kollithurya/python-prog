@@ -1,0 +1,109 @@
+program for primary diagonal sum
+n=int(input())
+m=[]
+sum=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=int(input())
+        l.append(x)
+    m.append(l)
+for i in range(0,n):
+    for j in range(0,n):
+        if i==j:
+            print(m[i][j])
+            sum=sum+m[i][j]
+print(sum)
+#program for primary diagonal sum
+n=int(input())
+m=[]
+sum=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=int(input())
+        l.append(x)
+    m.append(l)
+for i in range(0,n):
+    for j in range(0,n):
+        if i==j:
+            print(m[i][j])
+            sum=sum+m[i][j]
+print(sum)
+#program for secondary diagonal sum
+n=int(input())
+m=[]
+sum=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=int(input())
+        l.append(x)
+    m.append(l)
+for i in range(0,n):
+    for j in range(0,n):
+        if i+j==n-1:
+            print(m[i][j])
+            sum=sum+m[i][j]
+print(sum)
+#write a program to print difference between primary diagonal and secondary diagonal
+n=int(input())
+m=[]
+z=[]
+sum1=0
+sum2=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=int(input())
+        l.append(x)
+    m.append(l)
+for i in range(0,n):
+    for j in range(0,n):
+        if i==j:
+            sum1=sum1+m[i][j]
+        if i+j==n-1:
+            sum2=sum2+m[i][j]
+print(sum1-sum2)
+       
+#write a program to print given matrix is markov or not(each row sum ==1)
+n=int(input())
+m=[]
+c=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=float(input())
+        l.append(x)
+    m.append(l)
+for i in range(0,n):#0,1,2,3
+    sum=0
+    for j in range(0,n):#0,1,2
+        sum=sum+m[i][j]
+    if sum==1:
+        c=c+1
+if c==3:
+    print('Markov matrix')
+else:
+    print('Not a Markov matrix')
+   '''
+#write a program to print given matrix is markov or not(each column sum ==1)
+n=int(input())
+m=[]
+c=0
+for i in range(0,n):
+    l=[]
+    for j in range(0,n):
+        x=float(input())
+        l.append(x)
+    m.append(l)
+for j in range(0,n):#0,1,2,3
+    sum=0
+    for i in range(0,n):#0,1,2
+        sum=sum+m[i][j]
+    if sum==1:
+        c=c+1
+if c==3:
+    print('Markov matrix')
+else:
+    print('Not a Markov matrix')
