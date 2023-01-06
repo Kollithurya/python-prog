@@ -1,0 +1,173 @@
+Today class and assignments:
+'''
+set:
+    it is used to store collection of elements in a single variable
+    it does not allow to store duplicate values.
+    we can define set with curle braces {}
+    it does not store the values index wise
+
+s={1,3,4,6,7,8,1,6,3,6,6,6,6,6,6,6,6,3,3,3,3,3,3,3}
+l=list(s)#it converts set to list
+print(s)
+print(l)
+
+l=[1,3,4,6,7,8,1,6,3,6,6,6,6,6,6,6,6,3,3,3,3,3,3,3]
+s=set(l)#it converts list to set
+print(s)
+print(l)
+#write a program to print how many duplicate elements in the given list or array
+n=int(input())#it denotes total number of elements
+l=list(map(int,input().split()))#it contains duplicates
+s=set(l)#it contains non repeated values
+print(n-len(s))
+
+n=8
+l=1  2  3 2 4  7 8  3
+s=1 2 3 4 7 8
+2
+'''
+#write a program to print duplicate values from the given array or list
+'''
+input:
+n=8
+                        i
+1 2 3 4 1 2 5 6
+output:
+1 2
+
+n=int(input())
+l=list(map(int,input().split()))
+u=[]#it stores unique values
+d=[]#it stores duplicate values
+for i in l:
+    if i not in u:
+        u.append(i)
+    else:
+        d.append(i)
+for i in d:
+    print(i,end=' ')
+print()
+print(len(d))
+'''
+'''
+list-it is mutable and allows duplicate values and allow to change the data
+tuple-it is immutable and allows duplicate values and not allow to change the data
+set-it does not allow duplicate values.
+String:
+    A collection of characters is called String.
+    the str keyword is used to convert any data into string in python
+    we can use input() method for reading string from the keyboard
+#read a string from the keyboard
+#check with the following functions
+
+1.startswith()
+2.endswith()
+3.islower()
+4.isupper()
+5.isdigit()
+6.isalpha()
+'''
+#write a program to print given phno is valid or not
+'''
+case1:the phone number shoud start with 9 or 8 or 7 or 6
+case2:total digits count is equal to 10
+
+phno=input()
+if len(phno)==10:
+    if phno.startswith("9") or phno.startswith("8") or phno.startswith("7") or phno.startswith("6"):
+        print('Valid phno')
+    else:
+         print('Invalid phno')
+else:
+    print('Invalid phno')
+                      0 1 2 3
+phno=input()#4 9 5 9 0 5 0430
+f=int(phno[0])#4
+if len(phno)==10 and f>5:
+        print('Valid phno')
+else:
+    print('Invalid phno')
+name=input()
+n=len(name)
+for i in range(0,n):
+    print(name[i])
+'''
+
+#write a program to check the given email is valid or not(gmail,yahoo and aditya)
+'''
+gmail->@gmail.com
+yahoo->@yahoo.com
+aditya->@adc.aditya.ac.in
+
+email=input()
+if email.endswith("@gmail.com") or email.endswith("@yahoo.com") or email.endswith("@adc.aditya.ac.in"):
+    print("Valid Email id")
+else:
+    print("Invalid Email id")
+       
+                #                                          i
+phno=input()#9   9   5  9  0   5  g  5  5  5
+c=0#9
+f=int(phno[0:2])#9
+for i in phno:
+    if i.isdigit():
+        c=c+1
+if c==11 and f>5 and phno[0]=='0':
+    print('Valid phno')
+else:
+    print('Invalid phno')
+   
+   
+
+
+'''
+
+phno=input()
+if len(phno)==13:
+    if phno.startswith("+919") or phno.startswith("+918") or phno.startswith("+917") or phno.startswith("+916"):
+        print('Valid phno')
+    else:
+         print('Invalid phno')
+else:
+    print('Invalid phno')
+
+    '''
+
+assignment1:write a program to remove duplicates from the group of elements
+ex:
+5
+1 2 3 4 4
+output:
+1 2 3 4
+assignment-2:write a program to identify the email company
+enter email id:
+    input:
+    rajesh@gmail.com
+    output:
+        you are using google account
+         input:
+    rajesh@yahoo.com
+    output:
+        you are using yahoo account
+         input:
+    rajesh@adc.aditya.ac.in
+    output:
+        you are using aditya educational institute account
+
+        assignment-3:
+        write a program to check given email id and phno are valid or not.
+        if they are valid print "Registration successully"(check for 3 mail accounts)
+        otherwise print check your details
+
+        input:
+        email:rajesh@gmail.com
+        phno:9959050430
+        output:
+        Registration successully
+        input:
+        email:rajesh@gmil.com
+        phno:9959050430
+        output:
+        check your details
+
+'''
