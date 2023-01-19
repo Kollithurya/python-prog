@@ -1,0 +1,149 @@
+'''
+INPUT:
+SARANYA
+OUTPUT:
+S
+SA
+SAR
+SARA
+SARAN
+SARANYA
+
+1
+12
+123
+1234
+12345
+s=input()#teja
+n=len(s)#4
+for i in range(1,n+1):
+    #print(s[0:i])#without space
+    for j in range(i):
+        print(s[j],end='   ')
+    print()
+   
+0 1  2   3
+t  e  j   a
+
+0(0:1)
+01(0:2)
+012(0:3)
+0123
+
+t
+te
+tej
+teja
+'''
+
+#write a program to remove given character from the string.
+'''
+ex:
+input:
+    aditya
+    d
+    output:
+    aitya
+s=input()
+c=input()
+s=s.replace(c[0],'')
+print(s)
+'''
+#write a program to print given string parenthesis is valid or invalid
+'''
+input:
+[()]
+
+output:
+   Yes
+
+ input:
+[[[[()]
+
+output:
+No
+def valid(s):#[}
+    while(True):
+        if '[]' in s:
+            s=s.replace('[]','')
+        elif '()' in s:
+            s=s.replace('()','')
+        elif '{}' in s:
+            s=s.replace('{}','')
+        else:
+           return not s    
+s=input()
+if valid(s):
+    print('Yes')
+else:
+    print('No')
+'''
+#write a program to print unique characters from the string
+'''
+ex:
+input:
+s=AABBXXDDFG
+output:
+ABXDFG
+
+s=input()
+x=''#empty string
+y=''
+for i in s:
+    if i not in x:
+        x=x+i#concatenating two strings or characters
+    else:
+        y=y+i
+print(x)
+print(y)
+    '''
+#write a program to convert given string into n number of times based on neighbour digit
+'''
+ex:
+input:
+s=a3b2c3
+output:
+aaabbccc
+'''
+s=input()
+res=''
+n=len(s)
+for i in range(0,n):
+    if s[i].isdigit():
+        k=int(s[i])
+        for j in range(0,k):
+            if s[i-1].isdigit():
+                res=res+s[i-1]
+print(res)
+
+'''
+n=6
+                            i
+0   1   2   3   4    5
+a   3   b   2   c    3
+                          k
+res=aaabbccc
+
+'''
+
+
+assignment1:
+    https://www.hackerrank.com/challenges/balanced-brackets/problem
+assignment2:
+    write a program to print the following series using with the given string
+    input:
+        aditya
+    output:
+        aditya
+        adity
+        adit
+        adi
+        ad
+        a
+assignment-3:
+    write a program to print the following freequency
+    input:
+        aditya
+        2
+    output:
+        aaddiittyyaa
