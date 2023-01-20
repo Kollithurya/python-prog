@@ -1,0 +1,337 @@
+#WRITE A PROGRAM TO CONVERT FOLLOWING STRING INTO THEIR FREEQUENCY.
+'''for example
+input:
+s=aaaabbbbcccd
+output:
+a4b4c3d1
+                             
+               #        0   1   2    
+s=input()#         a   a   b  
+n=len(s)#3
+c=1
+k=0#
+res=''#a2b1
+for i in range(1,n):#i=3
+    if s[i]==s[k]:#
+        c=c+1#
+    else:
+        res=res+s[k]+str(c)
+        k=i
+        c=1
+    if i==n-1:#2
+        res=res+s[k]+str(c)
+print(res)
+
+                                        k                i          
+0    1   2   3   4   5   6   7    8    9   10   11
+a    a   a   a   b   b   b   b   c    c    c     d
+
+compare s[i] and s[k]
+1.compare s[1] and s[0],both are same ,c=2
+2.compare s[2] and s[0],both are same,c=3
+3.compare s[3] and s[0] ,both are same,c=4
+4.compare s[4] and s[0],both are not same
+
+if the condition is false
+res=res+s[k]+str(c)
+k=i
+c=1
+increment the i value
+compare s[i] and s[k]
+1.compare s[5] and s[4],both are same ,c=2
+2.compare s[6] and s[4],both are same,c=3
+3.compare s[7] and s[4],both are same,c=4
+4.compare s[8] and s[4],both are not same
+if the condition is false
+res=res+s[k]+str(c)
+k=i
+c=1
+#hacker rank yesterday program
+def valid(s):
+    while(True):
+        if '()' in s:
+            s=s.replace('()','')
+        elif '[]' in s:
+            s=s.replace('[]','')
+        elif '{}' in s:
+            s=s.replace('{}','')
+        else:
+            return not s
+t=int(input())
+for i in range(t):
+    s=input()
+    if valid(s):
+        print('YES')
+    else:
+        print('NO')
+
+
+
+#write a program to print given string into ascii codes
+s=input()#ab
+for i in s:
+    print(ord(i),end=' ')
+
+#write a program to print given string into alphabetical order
+s=input()#ab
+for i in s:
+    print(ord(i)-96,end=' ')
+   
+#write a program to print given string into alphabetical order
+s=input()#ab
+for i in s:
+    if i.islower():
+        print(ord(i)-96,end=' ')
+    else:
+         print(ord(i)-64,end=' ')
+'''
+#write a program to print first missing character from the continues consecutive characters.
+
+'''
+for example
+input:
+abd
+output
+c
+
+input:
+badfc
+
+output:
+e
+
+s=input()
+n=len(s)
+s=sorted(s)
+for i in range(1,n):
+    if ord(s[i])-ord(s[i-1])==1:
+      continue
+    else:
+        ch=chr(ord(s[i])-1)
+        break
+print(ch)    
+#write a program to print all missing characters from the given string
+s=input()
+n=len(s)
+s=sorted(s)
+for i in range(1,n):
+    if ord(s[i])-ord(s[i-1])==1:
+      continue
+    else:
+        ch=chr(ord(s[i])-1)
+        print(ch)
+'''
+
+#write a program to form one string from the another two strings.
+'''
+input:
+s1=ravi
+s2=teja
+output:
+    rtaevjia
+input:
+s1=hello
+s2=hi
+ouput:
+hheillo
+'''
+                #0   1   2   3  4
+s1=input()#h  e   l    l   0#5
+s2=input()#h  i#2
+s=''
+if len(s1)>len(s2):
+    n=len(s1)
+else:
+    n=len(s2)#
+for i in range(0,n):#5<5
+    if(i<len(s1)):
+       s=s+s1[i]
+    if(i<len(s2)):
+       s=s+s2[i]
+print(s)
+
+assignment1:
+    write a program to convert string into following format
+
+    for example:
+        aaabb
+    output:
+        3a2b
+assignment2:
+    write a program to print missing character ascii code
+    for example
+    input:abd
+    ouput:99
+assignment-3:
+    write program to remove vowels from the given string.
+    for example
+    input:aditya
+    output:dty#WRITE A PROGRAM TO CONVERT FOLLOWING STRING INTO THEIR FREEQUENCY.
+'''for example
+input:
+s=aaaabbbbcccd
+output:
+a4b4c3d1
+                             
+               #        0   1   2    
+s=input()#         a   a   b  
+n=len(s)#3
+c=1
+k=0#
+res=''#a2b1
+for i in range(1,n):#i=3
+    if s[i]==s[k]:#
+        c=c+1#
+    else:
+        res=res+s[k]+str(c)
+        k=i
+        c=1
+    if i==n-1:#2
+        res=res+s[k]+str(c)
+print(res)
+
+                                        k                i          
+0    1   2   3   4   5   6   7    8    9   10   11
+a    a   a   a   b   b   b   b   c    c    c     d
+
+compare s[i] and s[k]
+1.compare s[1] and s[0],both are same ,c=2
+2.compare s[2] and s[0],both are same,c=3
+3.compare s[3] and s[0] ,both are same,c=4
+4.compare s[4] and s[0],both are not same
+
+if the condition is false
+res=res+s[k]+str(c)
+k=i
+c=1
+increment the i value
+compare s[i] and s[k]
+1.compare s[5] and s[4],both are same ,c=2
+2.compare s[6] and s[4],both are same,c=3
+3.compare s[7] and s[4],both are same,c=4
+4.compare s[8] and s[4],both are not same
+if the condition is false
+res=res+s[k]+str(c)
+k=i
+c=1
+#hacker rank yesterday program
+def valid(s):
+    while(True):
+        if '()' in s:
+            s=s.replace('()','')
+        elif '[]' in s:
+            s=s.replace('[]','')
+        elif '{}' in s:
+            s=s.replace('{}','')
+        else:
+            return not s
+t=int(input())
+for i in range(t):
+    s=input()
+    if valid(s):
+        print('YES')
+    else:
+        print('NO')
+
+
+
+#write a program to print given string into ascii codes
+s=input()#ab
+for i in s:
+    print(ord(i),end=' ')
+
+#write a program to print given string into alphabetical order
+s=input()#ab
+for i in s:
+    print(ord(i)-96,end=' ')
+   
+#write a program to print given string into alphabetical order
+s=input()#ab
+for i in s:
+    if i.islower():
+        print(ord(i)-96,end=' ')
+    else:
+         print(ord(i)-64,end=' ')
+'''
+#write a program to print first missing character from the continues consecutive characters.
+
+'''
+for example
+input:
+abd
+output
+c
+
+input:
+badfc
+
+output:
+e
+
+s=input()
+n=len(s)
+s=sorted(s)
+for i in range(1,n):
+    if ord(s[i])-ord(s[i-1])==1:
+      continue
+    else:
+        ch=chr(ord(s[i])-1)
+        break
+print(ch)    
+#write a program to print all missing characters from the given string
+s=input()
+n=len(s)
+s=sorted(s)
+for i in range(1,n):
+    if ord(s[i])-ord(s[i-1])==1:
+      continue
+    else:
+        ch=chr(ord(s[i])-1)
+        print(ch)
+'''
+
+#write a program to form one string from the another two strings.
+'''
+input:
+s1=ravi
+s2=teja
+output:
+    rtaevjia
+input:
+s1=hello
+s2=hi
+ouput:
+hheillo
+'''
+                #0   1   2   3  4
+s1=input()#h  e   l    l   0#5
+s2=input()#h  i#2
+s=''
+if len(s1)>len(s2):
+    n=len(s1)
+else:
+    n=len(s2)#
+for i in range(0,n):#5<5
+    if(i<len(s1)):
+       s=s+s1[i]
+    if(i<len(s2)):
+       s=s+s2[i]
+print(s)
+
+assignment1:
+    write a program to convert string into following format
+
+    for example:
+        aaabb
+    output:
+        3a2b
+assignment2:
+    write a program to print missing character ascii code
+    for example
+    input:abd
+    ouput:99
+assignment-3:
+    write program to remove vowels from the given string.
+    for example
+    input:aditya
+    output:dty
